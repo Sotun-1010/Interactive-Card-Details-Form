@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* , *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+.gradient-background {
+    background-image: url("images/bg-main-desktop.png");
+    width: 33%;
+}
+
+.bg-card-front {
+    position: relative;
+    top: 11%;
+    left: 10%;
+}
+
+.bg-card-back {
+    position: relative;
+    top: -10%;
+    left: 24%;
+}
+
+.logos {
+    position: relative;
+    top: -22.5%;
+    left: 15.5%;
+}
+
+
+#card-number1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    position: relative;
+    top: -18.5%;
+    left: 15.5%;
+    color: #fff;
+    width: max-content;
+
+}
+
+.card-name-exp-date {
+    letter-spacing: 2.1px;
+    font-size: small;
+    color: #fff;
+    position: relative;
+    top: -12.5%;
+    left: 15.5%;
+}
+
+.exp-date-grad {
+    letter-spacing: 2.1px;
+    font-size: small;
+    color: #fff;
+    position: relative;
+    top: -15.2%;
+    left: 92%;
+}
+
+.crv-no {
+    position: relative;
+    top: -31%;
+    left: 102%;
+    color: #fff;
+}
+
+.plain-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.plain-bg .incomplete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.plain-bg .input-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    margin-left: 5rem;
+}
+
+.cardholder-name, .card-number {
+    display: flex;
+    flex-direction: column;
+}
+
+.exp-date-cvc {
+    display: flex;
+    gap: 3.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.date-figure {
+    display: flex;
+    gap: .5rem;
+}
+
+
+.cvc-no, .exp-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+input {
+    padding: 1rem .5rem;
+    width: 24rem;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: .5px solid black;
+    font-size: large;
+}
+
+input:focus {
+    outline-color: hsl(278, 81%, 24%);
+}
+
+input::placeholder {
+    opacity: 0.5;
+    margin-left: 5px;
+    font-size: large;
+    letter-spacing: 2.1px;
+    color: hsl(279, 6%, 55%);
+}
+
+label {
+    text-transform: uppercase;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+label, .exp-date-cvc {
+    margin-top: 15px;
+}
+
+.exp-date-cvc .exp-date input {
+    width: 5rem;
+}
+
+.exp-date-cvc .cvc-no input {
+    width: 10rem;
+}
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 1rem .5rem;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+}
+
+/* complete */
+.plain-bg .complete {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-left: 5rem;
+}
+
+.complete .thank-you-text, .complete .card-details-text {
+    margin-top: -.7rem;
+}
+
+.complete .card-details-text {
+    color: hsl(279, 6%, 55%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    margin-top: -18px;
+}
+
+.complete .continue {
+    width: 24rem;
+    padding: 1rem .5rem;
+    border-radius: 10px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+}
+
+/* Media Queries */
+
+/* 1037px */
+@media screen and (max-width: 1037px ) {
+    .plain-bg .input-form {
+    margin-left: 10rem;
+}
+
+.exp-date-grad {
+    position: relative;
+    top: -15.5%;
+    left: 116%;
+}
+
+.crv-no {
+    position: relative;
+    top: -31.5%;
+    left: 126%;
+}
+}
+
+
+/* 964px */
+@media screen and (max-width: 964px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .gradient-background{
+        height: 20rem;
+        width: 100%;
+        background-image: url("images/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
+
+    .bg-card-back {
+        position: relative;
+        top: -100%;
+        left: 29%;
+        width: 400px;
+        height: 200px;
+    }
+
+    .bg-card-front{
+        position: relative;
+        top: 45%;
+        left: 20%;
+        width: 400px;
+        height: 200px;
+        z-index: 2;
+    }
+
+    .plain-bg .input-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 4.5rem;
+    } 
+
+    .plain-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    /* the others */
+    .logos {
+        position: relative;
+        top: -12%;
+        left: 22.5%;
+        z-index: 3;
+    }
+    
+    #card-number1 {
+        position: relative;
+        z-index: 3;
+        top: -5%;
+        left: 22.5%;
+        font-size: 1.8rem; 
+    }
+    
+    .card-name-exp-date {
+        position: relative;
+        z-index: 3;
+        top: 1.5%;
+        left: 22.5%;
+    }
+    
+    .exp-date-grad {
+        position: relative;
+        z-index: 3;
+        top: -4.3%;
+        left: 55%;
+    }
+    
+    .crv-no {
+        position: relative;
+        z-index: 3;
+        top: -137.8%;
+        left: 63%;
+    }
+
+    .plain-bg .complete {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        margin-left: 5rem;
+        margin-top: 4.5rem;
+    }
+}
+
+/* 643px */
+@media screen and (max-width: 643px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .gradient-background{
+        height: 20rem;
+        width: 100%;
+        background-image: url("images/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
+
+    .bg-card-back {
+        position: relative;
+        top: -100%;
+        left: 9%;
+        width: 400px;
+        height: 200px;
+    }
+
+    .bg-card-front{
+        position: relative;
+        top: 45%;
+        left: 1%;
+        width: 400px;
+        height: 200px;
+        z-index: 2;
+    }
+
+    .plain-bg .input-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 4.5rem;
+    } 
+
+    .plain-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    /* the others */
+    .logos {
+        position: relative;
+        top: -12%;
+        left: 3.5%;
+        z-index: 3;
+    }
+    
+    #card-number1 {
+        position: relative;
+        z-index: 3;
+        top: -5%;
+        left: 3.5%;
+        font-size: 1.8rem; 
+    }
+    
+    .card-name-exp-date {
+        position: relative;
+        z-index: 3;
+        top: 1.5%;
+        left: 3.5%;
+    }
+    
+    .exp-date-grad {
+        position: relative;
+        z-index: 3;
+        top: -4.3%;
+        left: 52%;
+    }
+    
+    .crv-no {
+        position: relative;
+        z-index: 3;
+        top: -137.8%;
+        left: 60%;
+    }
+
+    .plain-bg .complete {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        margin-left: 5rem;
+        margin-top: 4.5rem;
+    }
+}
+
+/* 544px */
+@media screen and (max-width: 544px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .gradient-background{
+        height: 20rem;
+        width: 100%;
+        background-image: url("images/bg-main-desktop.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
+
+    .bg-card-back {
+        position: relative;
+        top: -100%;
+        left: 9%;
+        width: 400px;
+        height: 200px;
+    }
+
+    .bg-card-front{
+        position: relative;
+        top: 45%;
+        left: 1%;
+        width: 400px;
+        height: 200px;
+        z-index: 2;
+    }
+
+    .plain-bg .input-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 4.5rem;
+    } 
+
+    .plain-bg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+    /* the others */
+    .logos {
+        position: relative;
+        top: -12%;
+        left: 3.5%;
+        z-index: 3;
+    }
+    
+    #card-number1 {
+        position: relative;
+        z-index: 3;
+        top: -5%;
+        left: 3.5%;
+        font-size: 1.8rem; 
+    }
+    
+    .card-name-exp-date {
+        position: relative;
+        z-index: 3;
+        top: 1.5%;
+        left: 3.5%;
+    }
+    
+    .exp-date-grad {
+        position: relative;
+        z-index: 3;
+        top: -4.3%;
+        left: 68%;
+    }
+    
+    .crv-no {
+        position: relative;
+        z-index: 3;
+        top: -137.8%;
+        left: 75%;
+    }
+
+    .plain-bg .complete {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1.5rem;
+        margin-left: 5rem;
+        margin-top: 4.5rem;
+    }
+}
+
+.attribution {
+    margin-left: 5rem;
+}
